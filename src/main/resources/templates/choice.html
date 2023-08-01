@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <title>choice</title>
+</head>
+<body>
+<header>
+    <div class="left">
+        <a href="./index.html"><span>⛄</span></a>
+    </div>
+    <div class="middle">
+        <span>날씨를 선택해주세요!</span>
+    </div>
+    <div class="right">
+        <span>💬</span>
+    </div>
+</header>
+<main>
+    <div class="top">
+        <div class="container1">
+            <span>WARM</span><br />
+            <span>⛄</span>
+        </div>
+        <div class="container1">
+            <span>COLD</span><br />
+            <span>⛄</span>
+        </div>
+        <div class="container1">
+            <span>RAIN</span><br />
+            <span>⛄</span>
+        </div>
+        <div class="container1">
+            <span>SNOW</span><br />
+            <span>⛄</span>
+        </div>
+    </div>
+    <div class="bottom">
+        <div class="container2">
+            <span>온도와 강수량을 입력해주세요!</span>
+            <div class="container3">
+                <form action="/temperature" method="post">
+                    <span>TEMPERATURE: <input type="text" id="temperatureInput" name="temperatureValue" /></span>
+                    <span>PRECIPITATION: <input type="text" id="precipitationInput" name="precipitationValue" /></span>
+                </form>
+            </div>
+        </div>
+    </div>
+</main>
+<footer>
+    <input type="submit" value="제출" onclick="submitForm()" />
+</footer>
+
+<script>
+    function submitForm() {
+        const temperatureInput = document.getElementById('temperatureInput');
+        const precipitationInput = document.getElementById('precipitationInput');
+
+        // Validate the inputs if needed
+        // ...
+
+        // Manually submit the form
+        const form = document.querySelector('form');
+        form.submit();
+    }
+</script>
+
+</body>
+</html>

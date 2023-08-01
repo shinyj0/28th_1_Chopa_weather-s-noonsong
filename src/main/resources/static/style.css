@@ -1,0 +1,344 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+headerhome .bg-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+    opacity: 0.59;
+}
+
+headerhome .bg-video__content {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+ul {
+    float: right;
+    list-style-type: none;
+    margin-top: 25px;
+}
+
+ul li {
+    display: inline-block;
+}
+
+ul li a {
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 20px;
+    color: rgb(216, 227, 251);
+    padding: 5px 25px;
+    border: 1px solid transparent;
+    transition: 1s ease;
+}
+
+ul li a:hover {
+    background-color: rgb(196, 215, 247);
+    color: black;
+}
+
+ul li.active a {
+    background-color: rgb(194, 214, 250);
+    color: #000;
+}
+
+headerhome .main {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.title {
+    position: absolute;
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.title h1 {
+    color: whitesmoke;
+    font-size: 70px;
+    font-weight: bold;
+}
+
+.button {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.btn {
+    border: 2.7px solid rgb(202, 217, 245);
+    padding: 10px 35px;
+    color: white;
+    font-size: 20px;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 1s ease;
+}
+
+.btn:hover {
+    background-color: #dce3ff;
+    color: #000;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+    width: 100%;
+    height: 80px;
+    background: rgba(100, 148, 237, 0.364);
+}
+
+header .left {
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+header .middle {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(74, 108, 170);
+}
+
+header .right {
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+main {
+    height: calc(100vh - 80px - 80px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    cursor: pointer;
+}
+
+main .top {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 320px;
+    width: 100%;
+}
+
+main .top .container1 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 240px;
+    width: 150px;
+    margin: 20px;
+    background: rgba(106, 156, 250, 0.919);
+    border: 3px solid beige;
+    border-radius: 20px;
+}
+
+main .top .container1:hover {
+    background: rgb(248, 168, 181);
+    transition: 1s ease;
+}
+
+main .top .container1 span {
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+}
+
+main .bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
+}
+
+main .bottom .container2 {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 14px 30px;
+    margin: 20px;
+    border: 3px solid beige;
+    background: rgb(177, 200, 244);
+    border-radius: 17px;
+}
+
+main .bottom .container2 span {
+    color: rgb(65, 96, 153);
+    font-weight: bold;
+}
+
+main .bottom .container2 .container3 {
+    padding: 12px 30px;
+    border-radius: 14px;
+    background: rgba(95, 140, 224, 0.752);
+    margin-top: 10px;
+    padding: 20px 30px;
+}
+
+main .bottom .container2 .container3 span {
+    color: white;
+    font-weight: bold;
+}
+
+main .bottom .container2 .container3 span input {
+    border: 2px solid white;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 80px;
+    position: fixed;
+    background: rgba(100, 148, 237, 0.364);
+}
+
+footer input {
+    margin-top: 17px;
+    font-size: 26px;
+    font-weight: bold;
+    color: white;
+    padding: 5px 50px;
+    border-radius: 35px;
+    border: 2px solid transparent;
+    background: rgba(85, 125, 200, 0.867);
+    margin-bottom: 12px;
+    cursor: pointer;
+}
+
+footer input:hover {
+    background: rgb(248, 168, 181);
+    transition: 1s ease;
+}
+
+footer span {
+    color: cornflowerblue;
+    font-weight: bold;
+    font-size: 26px;
+    cursor: pointer;
+}
+
+main2 {
+    height: calc(100vh - 80px - 80px);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: black;
+    cursor: pointer;
+}
+
+main2 .boxing {
+    border: 3px solid white;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    width: 1200px;
+    height: 450px;
+    border-radius: 17px;
+    background: rgb(249, 217, 222);
+}
+
+main2 .boxing .box-left {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 500px;
+    height: 350px;
+    border: 3px solid white;
+    background: rgb(156, 179, 241);
+    border-radius: 17px;
+    margin: 20px;
+    color: rgb(89, 119, 199);
+    font-weight: bold;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+main2 .boxing .box-left .one {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: space-between;
+    width: 330px;
+    height: 180px;
+    border-radius: 20px;
+}
+
+main2 .boxing .box-left .one .topleftbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(221, 231, 253);
+    padding: 10px 10px;
+    border-radius: 10px;
+}
+
+main2 .boxing .box-left .one .bottomleftbox {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgb(221, 231, 253);
+    padding: 10px 10px;
+    border-radius: 10px;
+    margin-top: 80px;
+}
+
+main2 .boxing .box-left .two {
+    display: flex;
+    justify-content: center;
+    align-items: top;
+    padding: 20px;
+    background: rgb(221, 231, 253);
+    color: rgb(89, 119, 199);
+    font-weight: bold;
+    width: 330px;
+    height: 100px;
+    border-radius: 17px;
+}
+
+main2 .boxing .box-right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    width: 350px;
+    height: 300px;
+    border: 3px solid white;
+    background: rgb(156, 179, 241);
+    border-radius: 17px;
+    color: rgb(89, 119, 199);
+    font-size: 17px;
+    font-weight: bold;
+    margin: 30px;
+}
+
+main2 .boxing .box-right .toprightbox {
+    background: rgb(221, 231, 253);
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+main2 .boxing .box-right .bottomrightbox {
+    color: rgb(89, 119, 199);
+    background: rgb(221, 231, 253);
+    width: 250px;
+    height: 150px;
+    border-radius: 10px;
+}

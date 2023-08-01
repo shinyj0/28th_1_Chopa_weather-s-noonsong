@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="./style.css" />
+  <title>WEATHER</title>
+</head>
+<body>
+<header>
+  <div class="left">
+    <a href="./index.html"><span>⛄</span></a>
+  </div>
+  <div class="middle">
+    <span>날씨를 확인해보세요!</span>
+  </div>
+  <div class="right">
+    <span>💬</span>
+  </div>
+</header>
+<main2>
+  <div class="boxing">
+    <div class="box-left">
+      <div class="one">
+        <div class="topleftbox">주간 날씨 한눈에 보기</div>
+        <div class="middleleftbox"><span th:text=" ${minTemperature}"></span>/<span th:text=" ${maxTemperature}
+"></span><span th:text=" ${skyStatus}"></span></div>
+        <div class="bottomleftbox">오늘   내일   모레</div>
+      </div>
+      <div class="two">현재기온은  <span th:text=" ${weatherInfo}"></span>입니다.</div>
+      <div class="bottombox"></div>
+    </div>
+    <div class="box-right">
+      <div class="toprightbox">
+        <br>오늘<span th:text=" ${precipitation}"></span><span th:text=" ${minTemperature}"></span>/<span th:text=" ${maxTemperature}
+"></span>
+        <br>내일<span th:text=" ${precipitation1}"></span><span th:text=" ${minTemperature1}"></span>/<span th:text=" ${maxTemperature1}
+"></span>
+        <br>모레<span th:text=" ${precipitation2}"></span><span th:text=" ${minTemperature2}"></span>/<span th:text=" ${maxTemperature2}
+"></span>
+      </div>
+      <div class="bottomrightbox"></div>
+    </div>
+  </div>
+</main2>
+<footer><span>✔</span></footer>
+</body>
+</html>
