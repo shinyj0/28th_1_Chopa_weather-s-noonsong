@@ -109,7 +109,7 @@ public class temperatureCon {
             String baseDate = item.getElementsByTagName("baseDate").item(0).getTextContent();
             String baseTime = item.getElementsByTagName("baseTime").item(0).getTextContent();
 
-            weatherInfo.append("지금은 ").append(fcstValue).append("℃, ");
+            weatherInfo.append("지금은 ").append(fcstValue).append("°, ");
 
             double tem1 = Double.parseDouble(fcstValue);
             if(tem1 <= 15) weatherInfo.append("\nCOLD");
