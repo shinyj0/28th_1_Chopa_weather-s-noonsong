@@ -12,15 +12,21 @@
   <title>OOTD</title>
 </head>
 <style>
+  @font-face {
+    font-family: 'MyCustomFont';
+    src: url('./papafont.ttf') format('truetype');
+  }
   pre {
     font-size: 16px; /* 원하는 글자 크기로 변경합니다. */
     font-weight: bold; /* 원하는 글자 두께로 변경합니다. */
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
   }
   time {
-    font-size: 16px; /* 원하는 글자 크기로 변경합니다. */
+    font-size: 30px; /* 원하는 글자 크기로 변경합니다. */
     font-weight: bold; /* 원하는 글자 두께로 변경합니다. */
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
+    margin-top: 200px;
+    margin-left: 185px
   }
 </style>
 <body>
@@ -29,7 +35,7 @@
     <a href="./index.html"><span><img src = "./noon.png"><img src = "./home!.png"></span></a>
   </div>
   <div class="middle">
-    <span>날씨의 눈송</span>
+    <span style="font-family: 'MyCustomFont', sans-serif; font-size: 35px">날씨의 눈송</span>
   </div>
   <div class="right">
     <span></span>
@@ -37,27 +43,32 @@
 </header>
 
 <main>
-  <section id = "section" style = "float : left;">
-    <div style = "font-size:14pt; font-weight: 700;" class = "text">
+  <div class="bg-video">
+    <video class="bg-video__content" autoplay muted loop>
+      <source src="./weather.mp4" type="video/mp4" />
+    </video>
+  </div>
+  <div class = "container" style="position: absolute; top: 0; left: 0; z-index: 1;">
+    <div style = "font-size:25pt; font-weight: 700; font-family: 'MyCustomFont', sans-serif;" class = "text">
       <p><div id="current_date">
       <script>
         date = new Date();
         month = date.getMonth() + 1;
         day = date.getDate();
         document.getElementById("current_date").innerHTML = "오늘은 "+month + "월 " + day + "일";
-      </script></div></p>
+      </script> </div></p>
     </div>
-
-    <div style="font-size:11pt; font-weight: 400;;", class = "text">
-      <p><h3 th:text="${skyInfo}"></h3></p>
+    <div style="font-size:20pt; font-weight: 400; font-family: 'MyCustomFont', sans-serif", class = "text">
+      <p ><h3 th:text="${skyInfo}"></h3></p>
     </div>
-
+  </div>
+  <br><br><br><br><br><br><br>
+  <section id = "section" style = "float : left; margin-left : 100px;">
     <div id = "box">
-
       <div class = "noonsong">
-        <img src = "./basic_noonsong.png">
+        <img src = "./basic_noonsong.png" width="200" height="200" style="margin-top: 76px; ">
       </div>
-      <div class = "text_box">
+      <div class = "text_box" style="margin-top: 150px; margin-right: 53px; font-family: 'MyCustomFont', sans-serif;" >
         <p>OUTER: <span th:text="${outer}"></span>
           <br>TOP: <span th:text="${top}"></span>
           <br>BOTTOM: <span th:text="${bottom}"></span>
@@ -65,15 +76,15 @@
       </div>
     </div>
   </section>
-  <section id = "section" style="float : right;">
+    <section id = "section" style="float : right; margin-right :100px;">
     <div id = "box">
-      <div style="font-size:11pt; font-weight: 400;;", class = "text_box">
-        <p><time>시간대별 날씨</time></p>
-        <p><pre th:text="${weatherInfo}"></pre></p>
+      <div style="font-size:11pt; font-weight: 400;", class = "text_box">
+        <br><p><time>시간대별 날씨</time></p>
+        <p><pre style="  font-size: 30px;  font-weight: bold;  margin-top: 50px; margin-left: 190px;  "th:text="${weatherInfo}"></pre></p>
       </div>
   </section>
 </main>
 <footer>
 </footer>
 </body>
-</html>
+</html>>

@@ -10,11 +10,16 @@
   <title>RECOMMEND</title>
 
   <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('./papafont.ttf') format('truetype');
+    }
+
     /* 기존 스타일 설정 */
     .center_box{
       width : 550px;
       height: 380px;
-      background-color:rgb(206, 219, 244);
+      background-color: rgba(206, 219, 244, 0.29);
       margin-left : 15%;
       margin-right: 15%;
       display: flex;
@@ -23,24 +28,27 @@
 
 
     .text {
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'MyCustomFont', sans-serif;
       color: black;
       align-items: center;
       justify-content: center;
       display: flex;
-      font-size: 14pt;
+      padding-bottom: 20px;
+      font-size: 25pt;
+      font-weight: bold;
     }
 
     .text_box {
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'MyCustomFont', sans-serif;
       color: black;
       margin-top: 50%;
       text-align: left;
       align-items: center;
       justify-content: center;
       display: flex;
+      font-size: 20pt;
+      font-weight: bold;
     }
-
     .noonsong {
       display: block;
       margin-top: 25%;
@@ -60,21 +68,24 @@
 <body>
 <header>
   <div class="left">
-    <a href="./index.html"><span>⛄</span></a>
+    <a href="./index.html"><span><img src = "./noon.png"><img src = "./home!.png"></span></a>
   </div>
   <div class="middle">
     <span>오늘의 옷을 추천해드립니다!</span>
   </div>
   <div class="right">
-    <span>💬</span>
+
   </div>
 </header>
 
 <main>
-
+  <video autoplay muted loop id="videoBackground">
+    <source src="./weather.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
 
   <div class="text">
-    <p>입력한 온도: <span th:text="${tem}"></span>℃ <br> 입력한 강수량: <span th:text="${pre}"></span>% </p>
+    <p>입력한 온도: <span th:text="${tem}"></span><span style="font-family: 'MyCustomFont', sans-serif"> °</span> <br> 입력한 강수량: <span th:text="${pre}"></span>% </p>
   </div>
 
   <div class="center_box">
@@ -84,7 +95,7 @@
       </div>
     </section>
 
-    <section id="section" style="float: right;">
+    <section id="section" style="float: right;" >
       <div class="text_box">
         <p>TOP: <span th:text="${top}"></span>
           <br>OUTER: <span th:text="${outer}"></span>
@@ -112,8 +123,9 @@
     if (pre>0){
       var imgElement = document.createElement("img");
       imgElement.src = "./rain_noonsong.png";
-      imgElement.width = 200; // 이미지의 너비를 200px로 설정
-      imgElement.height = 200; // 이미지의 높이를 200px로 설정
+      imgElement.width = 300; // 이미지의 너비를 200px로 설정
+      imgElement.height = 300; // 이미지의 높이를 200px로 설정
+      imgElement.style.marginLeft = "40px";
       noonsongElement.appendChild(imgElement);
     }
     else if (tem >= 20) {
@@ -121,6 +133,7 @@
       imgElement.src = "./basic_noonsong.png";
       imgElement.width = 200; // 이미지의 너비를 200px로 설정
       imgElement.height = 200; // 이미지의 높이를 200px로 설정
+      imgElement.style.marginLeft = "40px";
       noonsongElement.appendChild(imgElement);
     }
     else if (tem >= 10) {
@@ -128,6 +141,7 @@
       imgElement.src = "./pink_noonsong.png";
       imgElement.width = 200; // 이미지의 너비를 200px로 설정
       imgElement.height = 200; // 이미지의 높이를 200px로 설정
+      imgElement.style.marginLeft = "40px";
       noonsongElement.appendChild(imgElement);
     }
     else if (tem < 10) {
@@ -135,6 +149,7 @@
       imgElement.src = "./cold_noonsong.png";
       imgElement.width = 200; // 이미지의 너비를 200px로 설정
       imgElement.height = 200; // 이미지의 높이를 200px로 설정
+      imgElement.style.marginLeft = "40px";
       noonsongElement.appendChild(imgElement);
     }
   });

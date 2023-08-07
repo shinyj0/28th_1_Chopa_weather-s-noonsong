@@ -1,7 +1,15 @@
+@font-face {
+    font-family: 'MyCustomFont';
+    src: url('./papafont.ttf') format('truetype');
+}
+
+
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+
 }
 
 headerhome .bg-video {
@@ -32,7 +40,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
     font-size: 20px;
     color: rgb(216, 227, 251);
@@ -65,7 +73,7 @@ headerhome .main {
 
 .title h1 {
     color: whitesmoke;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-size: 70px;
     font-weight: bold;
 }
@@ -81,7 +89,7 @@ headerhome .main {
     border: 2.7px solid rgb(202, 217, 245);
     padding: 10px 35px;
     color: white;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -100,19 +108,20 @@ header {
     padding: 10px;
     width: 100%;
     height: 80px;
-    background: rgba(100, 148, 237, 0.364);
+    background: rgb(181, 198, 224);
+
 }
 
 header .left {
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-size: 35px;
     margin-left: 10px;
 }
 
 header .middle {
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 26px;
-    font-weight: bold;
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 35px;
+    font-weight: bolder;
     color: rgb(74, 108, 170);
 }
 
@@ -127,7 +136,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgba(189, 212, 252, 0.5);
     cursor: pointer;
 }
 
@@ -159,7 +168,7 @@ main .top .container1:hover {
 
 main .top .container1 span {
     color: white;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
@@ -185,7 +194,7 @@ main .bottom .container2 {
 
 main .bottom .container2 span {
     color: rgb(65, 96, 153);
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
 }
 
@@ -213,12 +222,12 @@ footer {
     width: 100%;
     height: 80px;
     position: fixed;
-    background: rgba(100, 148, 237, 0.364);
+    background: rgb(181, 198, 224);
 }
 
 footer input {
     margin-top: 17px;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-size: 26px;
     font-weight: bold;
     color: white;
@@ -237,7 +246,7 @@ footer input:hover {
 
 footer span {
     color: cornflowerblue;
-    font-family: 'Noto Sans KR', sans-serif;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
     font-size: 26px;
     cursor: pointer;
@@ -246,21 +255,24 @@ footer span {
 main2 {
     height: calc(100vh - 80px - 80px);
     display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: white;
+    background: rgba(189, 212, 252, 0.5);
     cursor: pointer;
 }
 
+
 main2 .boxing {
-    border: 3px solid white;
+
     display: flex;
     justify-content: space-around;
     align-items: center;
     width: 1200px;
     height: 450px;
-    border-radius: 17px;
-    background: white;
+
+    background: rgba(255, 255, 255, 0);
+
 }
 
 main2 .boxing .box-left {
@@ -270,14 +282,14 @@ main2 .boxing .box-left {
     align-items: center;
     width: 500px;
     height: 350px;
-    border: 3px solid white;
-    background: rgb(156, 179, 241);
+
+    background: rgba(156, 179, 241, 0.29);
     border-radius: 17px;
     margin: 20px;
-    color: rgb(89, 119, 199);
-    font-family: 'Noto Sans KR', sans-serif;
+    color: black;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
-    font-size: 17px;
+    font-size: 25px;
 }
 
 main2 .boxing .box-left .one {
@@ -292,7 +304,7 @@ main2 .boxing .box-left .one {
 
 main2 .boxing .box-left .one .topleftbox {
     text-align: center;
-    background: rgb(221, 231, 253);
+    background: rgba(221, 231, 253, 0.13);
     padding: 10px 10px;
     border-radius: 10px;
 }
@@ -301,7 +313,8 @@ main2 .boxing .box-left .one .middleleftbox span {
     display: flex;
     justify-content: center;
     text-align: center;
-    font-size: 20px;
+    font-size: 25px;
+    font-family: 'MyCustomFont', sans-serif;
     /*   margin-top: 30px;*/
 }
 
@@ -321,9 +334,9 @@ main2 .boxing .box-left .two {
     align-items: top;
     padding: 20px;
     padding-top: 40px;
-    background: rgb(221, 231, 253);
-    color: rgb(89, 119, 199);
-    font-family: 'Noto Sans KR', sans-serif;
+    background: rgba(221, 231, 253, 0.13);
+    color: black;
+    font-family: 'MyCustomFont', sans-serif;
     font-weight: bold;
     width: 330px;
     height: 100px;
@@ -337,12 +350,12 @@ main2 .boxing .box-right {
     align-items: center;
     width: 350px;
     height: 300px;
-    border: 3px solid white;
-    background: rgb(156, 179, 241);
+
+    background: rgba(156, 179, 241, 0.29);
     border-radius: 17px;
-    color: rgb(89, 119, 199);
-    font-family: 'Noto Sans KR', sans-serif;
-    font-size: 17px;
+    color: black;
+    font-family: 'MyCustomFont', sans-serif;
+    font-size: 25px;
     font-weight: bold;
     margin: 30px;
 }
@@ -352,10 +365,19 @@ main2 .boxing .box-right .three {
 }
 
 main2 .boxing .box-right .toprightbox {
-    background: rgb(221, 231, 253);
+    background: rgba(221, 231, 253, 0.13);
     padding: 10px 20px;
     border-radius: 10px;
     width: 250px;
     height: 200px;
     margin-bottom: 30px;
+}
+#videoBackground {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* 비디오 비율 유지 */
+    z-index: -1; /* 다른 요소 위에 비디오 배경이 표시되도록 설정 */
 }

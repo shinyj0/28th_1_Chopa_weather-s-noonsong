@@ -134,7 +134,7 @@ public class weekCon {
 
                 if (category.equals("T1H")) {
                     // category가 'T1H'인 경우 기온 정보로 처리
-                    weatherInfo.append(obsrValue).append("℃ ");
+                    weatherInfo.append(obsrValue).append("° ");
                     foundTemperature = true;
                   //  break;
                 }
@@ -273,16 +273,16 @@ public class weekCon {
             // 최저기온, 최고기온, 하늘상태를 모델에 추가
             if (minTemperature != null && maxTemperature != null && skyCode != null  && precipitation!= null && minTemperature2 != null && minTemperature1 != null && maxTemperature1 != null && precipitation1 != null && minTemperature2 != null && maxTemperature2 != null && precipitation2 != null) {
 
-                model.addAttribute("minTemperature", minTemperature + "℃");
-                model.addAttribute("maxTemperature", maxTemperature + "℃");
+                model.addAttribute("minTemperature", minTemperature + "°");
+                model.addAttribute("maxTemperature", maxTemperature + "°");
                 model.addAttribute("skyStatus", skyStatus);
                 model.addAttribute("precipitation", precipitation + "%");
-                model.addAttribute("minTemperature1", minTemperature1 + "℃");
-                model.addAttribute("maxTemperature1", maxTemperature1 + "℃");
+                model.addAttribute("minTemperature1", minTemperature1 + "°");
+                model.addAttribute("maxTemperature1", maxTemperature1 + "°");
                 model.addAttribute("precipitation1", precipitation1 + "%");
 
-                model.addAttribute("minTemperature2", minTemperature2 + "℃");
-                model.addAttribute("maxTemperature2", maxTemperature2 + "℃");
+                model.addAttribute("minTemperature2", minTemperature2 + "°");
+                model.addAttribute("maxTemperature2", maxTemperature2 + "°");
                 model.addAttribute("precipitation2", precipitation2 + "%");
 
             } else {

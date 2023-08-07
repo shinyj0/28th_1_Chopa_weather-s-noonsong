@@ -34,17 +34,23 @@ public class temperatureCon {
     private String nx = "60"; // x좌표
     private String ny = "126";// y좌표
     private String baseDate = strToday; // 조회하고 싶은 날짜
-    private LocalDateTime now = LocalDateTime.now(); // 현재 시각을 조회 시각에.
-    int hour = now.getHour()-1;
-    private String baseTime = hour + "00";
+    private String baseTime;
     private String type = "xml"; // 조회하고 싶은 type
 
     @GetMapping("/temperature")
     public String getTemperature(Model model) {
         String apiUrl = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtNcst";
-        String serviceKey = "HMt2MxiIwh55s2oGGTEavk%2FDgYwDuz%2Bk7EbMPN%2Fv2JyRdmPda93c1dGIDDfvnqHsDHJhTyyjq7G4ykbH8mviGA%3D%3D"; // 홈페이지에서 받은 키
+        String serviceKey = "7j%2Bj0bSrBD%2F9JbCHMUaNX3lm%2FxhH9nkQieSYF8IjvfZOBuK2f%2FgvJyiHeA27URwozmEk3U%2BSy%2BV6eUk9tba8UQ%3D%3D"; // 홈페이지에서 받은 키
+
 
         try {
+            LocalDateTime now = LocalDateTime.now();
+            int hour = now.getHour();
+            if (hour < 12) {
+                baseTime = String.format("%02d00", hour - 1); // 앞에 0을 붙여주기 위해 %02d 사용
+            } else {
+                baseTime = (hour - 1) + "00";
+            }
             StringBuilder urlBuilder = new StringBuilder(apiUrl);
             urlBuilder.append("?" + URLEncoder.encode("ServiceKey", "UTF-8") + "=" + serviceKey);
             urlBuilder.append("&" + URLEncoder.encode("nx", "UTF-8") + "=" + URLEncoder.encode(nx, "UTF-8"));

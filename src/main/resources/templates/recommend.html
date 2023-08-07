@@ -10,10 +10,14 @@
   <title>RECOMMEND</title>
 
   <style>
+    @font-face {
+      font-family: 'MyCustomFont';
+      src: url('./papafont.ttf') format('truetype');
+    }
     .center_box{
       width : 550px;
       height: 380px;
-      background-color:rgb(206, 219, 244);
+      background-color:rgb(206, 219, 244, 0.29);
       margin-left : 15%;
       margin-right: 15%;
       display: flex;
@@ -21,22 +25,23 @@
     }
 
     .text{
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'MyCustomFont', sans-serif;
       color : black;
       align-items: center;
       justify-content: center;
       display : flex;
-      font-size : 14pt;
+      font-size : 25pt;
     }
 
     .text_box{
-      font-family: 'Noto Sans KR', sans-serif;
+      font-family: 'MyCustomFont', sans-serif;
       color : black;
       margin-top : 50%;
       text-align: left;
       align-items: center;
       justify-content: center;
       display : flex;
+      font-size: 20pt;
     }
 
     .noonsong{
@@ -59,7 +64,7 @@
     <a href="./index.html"><span><img src = "./noon.png"><img src = "./home!.png"></span></a>
   </div>
   <div class="middle">
-    <span>오늘의 옷을 추천해드립니다!</span>
+    <span style="font-family: 'MyCustomFont', sans-serif; font-size: 35px">오늘의 옷을 추천해드립니다!</span>
   </div>
   <div class="right">
     <span></span>
@@ -67,8 +72,12 @@
 </header>
 </header>
 <main>
+  <video autoplay muted loop id="videoBackground">
+    <source src="./weather.mp4" type="video/mp4">
+    Your browser does not support HTML5 video.
+  </video>
   <div class = "text">
-    <p><div id="current_date" style="font-weight: 600;">
+    <p><div id="current_date" style="font-weight: 600; font-family: 'MyCustomFont', sans-serif;">
     <script>
       date = new Date();
       month = date.getMonth() + 1;

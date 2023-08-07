@@ -38,17 +38,30 @@ public class DayTemperature {
     private String baseDate = strToday; // 조회하고 싶은 날짜
     private LocalDateTime now = LocalDateTime.now(); // 현재 시각을 조회 시각에.
     int hour = now.getHour()-1;
-    private String baseTime = hour + "00";
-    private String fTime = hour+1 + "00";
+    private String baseTime;
+    private String fTime;
     private String type = "xml"; // 조회하고 싶은 type
     private String numOfRows = "250";
 
     @GetMapping("/ootd")
     public String getTemperature(Model model) {
         String apiUrl = "http://apis.data.go.kr/1360000/VilageFcstInfoService_2.0/getUltraSrtFcst";
-        String serviceKey = "HMt2MxiIwh55s2oGGTEavk%2FDgYwDuz%2Bk7EbMPN%2Fv2JyRdmPda93c1dGIDDfvnqHsDHJhTyyjq7G4ykbH8mviGA%3D%3D"; // 홈페이지에서 받은 키
+        String serviceKey ="7j%2Bj0bSrBD%2F9JbCHMUaNX3lm%2FxhH9nkQieSYF8IjvfZOBuK2f%2FgvJyiHeA27URwozmEk3U%2BSy%2BV6eUk9tba8UQ%3D%3D"; // 홈페이지에서 받은 키
+
 
         try {
+            LocalDateTime now = LocalDateTime.now();
+            int hour = now.getHour();
+            if (hour < 12) {
+                baseTime = String.format("%02d00", hour - 1); // 앞에 0을 붙여주기 위해 %02d 사용
+            } else {
+                baseTime = (hour - 1) + "00";
+            }
+            if (hour < 12) {
+                fTime = String.format("%02d00", hour); // 앞에 0을 붙여주기 위해 %02d 사용
+            } else {
+                fTime = (hour) + "00";
+            }
             StringBuilder urlBuilder = new StringBuilder(apiUrl);
             urlBuilder.append("?" + URLEncoder.encode("ServiceKey", "UTF-8") + "=" + serviceKey);
             urlBuilder.append("&" + URLEncoder.encode("nx", "UTF-8") + "=" + URLEncoder.encode(nx, "UTF-8"));
@@ -113,7 +126,7 @@ public class DayTemperature {
                     }
                 }
                 if(category.equals("T1H")){
-                    weatherInfo.append(fcstTime).append("시: ").append(fcstValue).append("℃\n");
+                    weatherInfo.append(fcstTime).append("시 : ").append(fcstValue).append("°\n");
 
                 }
 
@@ -140,7 +153,7 @@ public class DayTemperature {
                 String fcstValue = item.getElementsByTagName("fcstValue").item(0).getTextContent();String baseDate = item.getElementsByTagName("baseDate").item(0).getTextContent();
                 if(category.equals("T1H")){
                     double temperatureValue = Double.parseDouble(fcstValue);
-                    if (temperatureValue >= 28) {
+                    if (temperatureValue >= 25) {
                         model.addAttribute("outer", outer);
                         model.addAttribute("top", top);
                         model.addAttribute("bottom", bottom);

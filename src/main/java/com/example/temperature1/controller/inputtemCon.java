@@ -57,36 +57,38 @@ public class inputtemCon {
             model.addAttribute("point", point);
 
         } else if (temperatureValue >= 23) {
-            model.addAttribute("top", "반팔");
+            model.addAttribute("top", "셔링 블라우스");
             model.addAttribute("outer", "가디건");
-            model.addAttribute("bottom", "반바지, 얇은 나일론 소재의 긴바지");
+            model.addAttribute("bottom", "데님 스커트");
         } else if (temperatureValue >= 20) {
-            model.addAttribute("top", "긴팔 셔츠,반팔 위 긴 셔츠나, 반팔과 핸드워머");
+            model.addAttribute("top", "집업 맨투맨");
             model.addAttribute("outer", "-");
-            model.addAttribute("bottom", "긴바지");
+            model.addAttribute("bottom", "흑청바지");
         } else if (temperatureValue >= 17) {
-            model.addAttribute("top", "긴팔");
-            model.addAttribute("outer", "0온스 학잠, 반팔 위 겉옷 ");
-            model.addAttribute("bottom", "긴바지");
+            model.addAttribute("top", "스트라이프 셔츠");
+            model.addAttribute("outer", "0온스 학잠");
+            model.addAttribute("bottom", "치노 팬츠");
         } else if (temperatureValue >= 12) {
-            model.addAttribute("top", "니트,블레이저");
-            model.addAttribute("outer", "2온스 학잠, 가디건, 후드집업");
-            model.addAttribute("bottom", "-");
+            model.addAttribute("top", "기모후드집업");
+            model.addAttribute("outer", "가죽자켓");
+            model.addAttribute("bottom", "조거팬츠");
         } else if (temperatureValue >= 9) {
-            model.addAttribute("top", "보온을 위한 목티, 히트텍 ,기모 후드티");
-            model.addAttribute("outer", "기모 후드집업");
-            model.addAttribute("bottom", "-");
+            model.addAttribute("top", "목폴라");
+            model.addAttribute("outer", "맥코트");
+            model.addAttribute("bottom", "코듀로이 팬츠");
         } else if (temperatureValue >= 5) {
-            model.addAttribute("top", "보온을 위한 목티, 히트텍");
-            model.addAttribute("outer", "코트, 가죽자켓, 플리스");
-            model.addAttribute("bottom", "반바지, 얇은 나일론 소재의 긴바지");
+            model.addAttribute("top", "스웨터");
+            model.addAttribute("outer", "두터운 플리스");
+            model.addAttribute("bottom", "기모바지");
+            model.addAttribute("point", "레그워머");
         } else {
-            model.addAttribute("top", "보온을 위한 목티, 히트텍");
-            model.addAttribute("outer", "패딩, 코트, 목도리");
-            model.addAttribute("bottom", "-");
+            model.addAttribute("top", "니트집업");
+            model.addAttribute("outer", "패딩");
+            model.addAttribute("bottom", "패딩팬츠");
+            model.addAttribute("point", "목도리");
         }
         if (precipitationValue> 0) {
-            model.addAttribute("point", "우산, 우비, 장화");
+            model.addAttribute("point", "레인부츠");
         }
         model.addAttribute("tem", temperatureValue);
         model.addAttribute("pre", precipitationValue);
