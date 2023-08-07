@@ -1,0 +1,99 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header{
+    width: 100%;
+    height : 80px;
+    padding : 10px;
+    background-color : rgba(100, 148, 237, 0.364);
+    font-family: 'Noto Sans KR', sans-serif;
+    color : #4B6BA0;
+    font-size : 15pt;
+    font-weight: 700;
+    align-items: center;
+    justify-content: center;
+    display : flex;
+}
+
+header .left {
+    float : left;
+    font-size: 35px;
+    margin-left: 10px;
+}
+
+header .middle {
+    font-size: 26px;
+    font-weight: bold;
+    color: rgb(74, 108, 170);
+}
+
+header .right {
+    float : right;
+    font-size: 27px;
+    margin-right: 10px;
+}
+
+main {
+    height: calc(100vh - 80px - 80px);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: black;
+    cursor: pointer;
+}
+
+.text{
+    font-family: 'Noto Sans KR', sans-serif;
+    color : whitesmoke;
+    align-items: center;
+    justify-content: center;
+    display : flex;
+}
+
+.text_box{
+    font-family: 'Noto Sans KR', sans-serif;
+    color : black;
+    text-align: left;
+    align-items: center;
+    display : flex;
+}
+
+#box{
+    width : 550px;
+    height: 380px;
+    background-color:rgb(206, 219, 244);
+    margin-top : 20px;
+    margin-left : 15%;
+    margin-right: 15%;
+    display: flex;
+    border-radius: 17px;
+}
+
+footer{
+    height : 80px;
+    background-color : rgba(100, 148, 237, 0.364);
+    width : 100%;
+    bottom : 0px;
+    display: flex;
+    position: fixed;
+    z-index: 1;
+}
+
+#section {
+    width: 50%;
+    margin: 0 1%;
+    display: flex;
+    flex-direction: column; /* 섹션 내부의 요소들을 수평으로 배치합니다. */
+    align-items: center;
+}
+
+.noonsong{
+    display :  block;
+    margin-left : auto;
+    margin-right : auto;
+    text-align: center;
+    border-radius: 17px
+}

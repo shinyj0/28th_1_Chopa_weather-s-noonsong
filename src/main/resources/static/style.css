@@ -32,6 +32,7 @@ ul li {
 
 ul li a {
     text-decoration: none;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 20px;
     color: rgb(216, 227, 251);
@@ -64,6 +65,7 @@ headerhome .main {
 
 .title h1 {
     color: whitesmoke;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 70px;
     font-weight: bold;
 }
@@ -79,6 +81,7 @@ headerhome .main {
     border: 2.7px solid rgb(202, 217, 245);
     padding: 10px 35px;
     color: white;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 20px;
     font-weight: bold;
     text-decoration: none;
@@ -101,11 +104,13 @@ header {
 }
 
 header .left {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 35px;
     margin-left: 10px;
 }
 
 header .middle {
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 26px;
     font-weight: bold;
     color: rgb(74, 108, 170);
@@ -122,7 +127,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: white;
     cursor: pointer;
 }
 
@@ -154,6 +159,7 @@ main .top .container1:hover {
 
 main .top .container1 span {
     color: white;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 30px;
 }
@@ -179,6 +185,7 @@ main .bottom .container2 {
 
 main .bottom .container2 span {
     color: rgb(65, 96, 153);
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
 }
 
@@ -211,6 +218,7 @@ footer {
 
 footer input {
     margin-top: 17px;
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 26px;
     font-weight: bold;
     color: white;
@@ -229,6 +237,7 @@ footer input:hover {
 
 footer span {
     color: cornflowerblue;
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 26px;
     cursor: pointer;
@@ -239,7 +248,7 @@ main2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: black;
+    background: white;
     cursor: pointer;
 }
 
@@ -251,13 +260,13 @@ main2 .boxing {
     width: 1200px;
     height: 450px;
     border-radius: 17px;
-    background: rgb(249, 217, 222);
+    background: white;
 }
 
 main2 .boxing .box-left {
     display: flex;
     flex-direction: column;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
     width: 500px;
     height: 350px;
@@ -266,9 +275,9 @@ main2 .boxing .box-left {
     border-radius: 17px;
     margin: 20px;
     color: rgb(89, 119, 199);
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     font-size: 17px;
-    font-weight: bold;
 }
 
 main2 .boxing .box-left .one {
@@ -282,15 +291,21 @@ main2 .boxing .box-left .one {
 }
 
 main2 .boxing .box-left .one .topleftbox {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-align: center;
     background: rgb(221, 231, 253);
     padding: 10px 10px;
     border-radius: 10px;
 }
 
-main2 .boxing .box-left .one .bottomleftbox {
+main2 .boxing .box-left .one .middleleftbox span {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 20px;
+    /*   margin-top: 30px;*/
+}
+
+main2 .boxing .box-left .one .bottombox {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -305,8 +320,10 @@ main2 .boxing .box-left .two {
     justify-content: center;
     align-items: top;
     padding: 20px;
+    padding-top: 40px;
     background: rgb(221, 231, 253);
     color: rgb(89, 119, 199);
+    font-family: 'Noto Sans KR', sans-serif;
     font-weight: bold;
     width: 330px;
     height: 100px;
@@ -324,21 +341,21 @@ main2 .boxing .box-right {
     background: rgb(156, 179, 241);
     border-radius: 17px;
     color: rgb(89, 119, 199);
+    font-family: 'Noto Sans KR', sans-serif;
     font-size: 17px;
     font-weight: bold;
     margin: 30px;
+}
+
+main2 .boxing .box-right .three {
+    margin-top: 10px;
 }
 
 main2 .boxing .box-right .toprightbox {
     background: rgb(221, 231, 253);
     padding: 10px 20px;
     border-radius: 10px;
-}
-
-main2 .boxing .box-right .bottomrightbox {
-    color: rgb(89, 119, 199);
-    background: rgb(221, 231, 253);
     width: 250px;
-    height: 150px;
-    border-radius: 10px;
+    height: 200px;
+    margin-bottom: 30px;
 }

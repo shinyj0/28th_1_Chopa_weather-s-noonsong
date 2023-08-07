@@ -9,7 +9,7 @@
 <body>
 <header>
   <div class="left">
-    <a href="./index.html"><span>⛄</span></a>
+    <a href="./index.html"><span><img src = "./noon.png"><img src = "./home!.png"></span></a>
   </div>
   <div class="middle">
     <span>날씨를 확인해보세요!</span>
@@ -22,24 +22,21 @@
   <div class="boxing">
     <div class="box-left">
       <div class="one">
-        <div class="topleftbox">주간 날씨 한눈에 보기</div>
-        <div class="middleleftbox"><span th:text=" ${minTemperature}"></span>/<span th:text=" ${maxTemperature}
-"></span><span th:text=" ${skyStatus}"></span></div>
-        <div class="bottomleftbox">오늘   내일   모레</div>
+        <div class="topleftbox">날씨 한눈에 보기</div>
+
+        <div class="middleleftbox"><br><span>최저:&nbsp;<span th:inline="text">[[${minTemperature}]]</span></span><span>최고:&nbsp;<span th:inline="text">[[${maxTemperature}]]</span></span><span th:inline="text">[[${skyStatus}]]</span> </div>
       </div>
-      <div class="two">현재기온은  <span th:text=" ${weatherInfo}"></span>입니다.</div>
+      <div class="two"><br><span>현재기온은&nbsp;<span th:utext="${weatherInfo}"></span>입니다.</span></div>
+
       <div class="bottombox"></div>
     </div>
     <div class="box-right">
+      <div class="three"><strong>어제 오늘 내일의 날씨</strong></div>
       <div class="toprightbox">
-        <br>오늘<span th:text=" ${precipitation}"></span><span th:text=" ${minTemperature}"></span>/<span th:text=" ${maxTemperature}
-"></span>
-        <br>내일<span th:text=" ${precipitation1}"></span><span th:text=" ${minTemperature1}"></span>/<span th:text=" ${maxTemperature1}
-"></span>
-        <br>모레<span th:text=" ${precipitation2}"></span><span th:text=" ${minTemperature2}"></span>/<span th:text=" ${maxTemperature2}
-"></span>
+        <br>오늘  <span th:inline="text">[[${precipitation}]]</span>   <span th:inline="text">[[${minTemperature}]]</span>  / <span th:inline="text">[[${maxTemperature}]]</span><br>
+        <br>내일  <span th:inline="text">[[${precipitation1}]]</span>   <span th:inline="text">[[${minTemperature1}]]</span> / <span th:inline="text">[[${maxTemperature1}]]</span><br>
+        <br>모레  <span th:inline="text">[[${precipitation2}]]</span>   <span th:inline="text">[[${minTemperature2}]]</span> / <span th:inline="text">[[${maxTemperature2}]]</span>
       </div>
-      <div class="bottomrightbox"></div>
     </div>
   </div>
 </main2>

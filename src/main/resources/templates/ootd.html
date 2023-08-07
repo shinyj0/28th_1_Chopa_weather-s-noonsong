@@ -1,106 +1,79 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta charset = "utf-8">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
-
-  <style>
-    body{
-      margin: 0;
-    }
-    #header{
-      width: 100%;
-      height : 80px;
-      background-color : rgba(100, 148, 237, 0.364);
-      font-family: 'Noto Sans KR', sans-serif;
-      color : #4B6BA0;
-      font-size : 15pt;
-      font-weight: 700;
-      align-items: center;
-      justify-content: center;
-      display : flex;
-    }
-
-    #section{
-      width : 50%;
-
-    }
-
-    .noonsong{
-      display :  block;
-      margin-left : auto;
-      margin-right : auto;
-      text-align: center;
-    }
-
-    .text{
-      font-family: 'Noto Sans KR', sans-serif;
-      align-items: center;
-      justify-content: center;
-      display : flex;
-    }
-
-    #box{
-      width : 550px;
-      height: 380px;
-      background-color:rgb(206, 219, 244);
-      margin-top : 20px;
-      margin-left : 15%;
-      margin-right: 15%;
-
-    }
-
-    footer{
-      height : 80px;
-      background-color : rgba(100, 148, 237, 0.364);
-      width : 100%;
-      bottom : 0px;
-      position: absolute;
-    }
-  </style>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="./ootd_css.css" />
+  <title>OOTD</title>
 </head>
-
+<style>
+  pre {
+    font-size: 16px; /* 원하는 글자 크기로 변경합니다. */
+    font-weight: bold; /* 원하는 글자 두께로 변경합니다. */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+  time {
+    font-size: 16px; /* 원하는 글자 크기로 변경합니다. */
+    font-weight: bold; /* 원하는 글자 두께로 변경합니다. */
+    font-family: 'Noto Sans KR', sans-serif;
+  }
+</style>
 <body>
-<div id = "page_weather_ootd">
-  <header id = "header">
-    날씨의 눈송
-  </header>
+<header>
+  <div class="left">
+    <a href="./index.html"><span><img src = "./noon.png"><img src = "./home!.png"></span></a>
+  </div>
+  <div class="middle">
+    <span>날씨의 눈송</span>
+  </div>
+  <div class="right">
+    <span></span>
+  </div>
+</header>
 
+<main>
   <section id = "section" style = "float : left;">
     <div style = "font-size:14pt; font-weight: 700;" class = "text">
-      <p>TODAY 날짜</p>
+      <p><div id="current_date">
+      <script>
+        date = new Date();
+        month = date.getMonth() + 1;
+        day = date.getDate();
+        document.getElementById("current_date").innerHTML = "오늘은 "+month + "월 " + day + "일";
+      </script></div></p>
     </div>
 
     <div style="font-size:11pt; font-weight: 400;;", class = "text">
-      <p>지금은 몇도</p>
-    </div>
-    <div class = "noonsong">
-      <img src = "character_new08.png">
-    </div>
-
-    <div class = "text">
-      <p>TOP : <br>OUTER : <br>BOTTOM : <br> POINT :</p>
-    </div>
-  </section>
-
-  <section id = "section1" style = "float : right;">
-    <div style = "font-size:14pt; font-weight: 700;" class = "text">
-      <p>최고 highest 최저 lowest</p>
-    </div>
-    <div style="font-size:11pt; font-weight: 400;;", class = "text">
-      <p>시간대별 날씨</p>
+      <p><h3 th:text="${skyInfo}"></h3></p>
     </div>
 
     <div id = "box">
+
+      <div class = "noonsong">
+        <img src = "./basic_noonsong.png">
+      </div>
+      <div class = "text_box">
+        <p>OUTER: <span th:text="${outer}"></span>
+          <br>TOP: <span th:text="${top}"></span>
+          <br>BOTTOM: <span th:text="${bottom}"></span>
+          <br>POINT: <span th:text="${point}"></span> </p>
+      </div>
     </div>
-
-
   </section>
-</div>
-
-<footer></footer>
+  <section id = "section" style="float : right;">
+    <div id = "box">
+      <div style="font-size:11pt; font-weight: 400;;", class = "text_box">
+        <p><time>시간대별 날씨</time></p>
+        <p><pre th:text="${weatherInfo}"></pre></p>
+      </div>
+  </section>
+</main>
+<footer>
+</footer>
 </body>
 </html>
