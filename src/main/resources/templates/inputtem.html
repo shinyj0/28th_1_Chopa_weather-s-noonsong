@@ -15,7 +15,6 @@
       src: url('./papafont.ttf') format('truetype');
     }
 
-    /* 기존 스타일 설정 */
     .center_box{
       width : 550px;
       height: 380px;
@@ -61,8 +60,6 @@
       width: 50%;
     }
 
-    /* 배경 영상 설정 */
-
   </style>
 </head>
 <body>
@@ -107,7 +104,7 @@
 </main>
 
 <footer>
-  <!-- 푸터 코드는 여기에 복사해주세요 -->
+
 </footer>
 
 <script>
@@ -123,8 +120,8 @@
     if (pre>0){
       var imgElement = document.createElement("img");
       imgElement.src = "./rain_noonsong.png";
-      imgElement.width = 300; // 이미지의 너비를 200px로 설정
-      imgElement.height = 300; // 이미지의 높이를 200px로 설정
+      imgElement.width = 300;
+      imgElement.height = 300;
       imgElement.style.marginLeft = "15px";
       imgElement.style.paddingBottom="50px";
       noonsongElement.appendChild(imgElement);
@@ -132,16 +129,16 @@
     else if (tem >= 20) {
       var imgElement = document.createElement("img");
       imgElement.src = "./basic_noonsong.png";
-      imgElement.width = 200; // 이미지의 너비를 200px로 설정
-      imgElement.height = 200; // 이미지의 높이를 200px로 설정
+      imgElement.width = 200;
+      imgElement.height = 200;
       imgElement.style.marginLeft = "40px";
       noonsongElement.appendChild(imgElement);
     }
     else if (tem >= 10) {
       var imgElement = document.createElement("img");
       imgElement.src = "./pink_noonsong.png";
-      imgElement.width = 300; // 이미지의 너비를 200px로 설정
-      imgElement.height = 300; // 이미지의 높이를 200px로 설정
+      imgElement.width = 300;
+      imgElement.height = 300;
       imgElement.style.marginLeft = "15px";
       imgElement.style.paddingBottom="50px";
       noonsongElement.appendChild(imgElement);
@@ -149,8 +146,8 @@
     else if (tem < 10) {
       var imgElement = document.createElement("img");
       imgElement.src = "./cold_noonsong.png";
-      imgElement.width = 300; // 이미지의 너비를 200px로 설정
-      imgElement.height = 300; // 이미지의 높이를 200px로 설정
+      imgElement.width = 300;
+      imgElement.height = 300;
       imgElement.style.marginLeft = "15px";
       imgElement.style.paddingBottom="50px";
       noonsongElement.appendChild(imgElement);
