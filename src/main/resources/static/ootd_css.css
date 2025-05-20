@@ -46,7 +46,7 @@ main {
     align-items: center;
     background: rgba(100, 148, 237, 0.364);
     cursor: pointer;
-    position: relative; /* main 요소에 position: relative;을 추가합니다. */
+    position: relative;
 }
 
 .bg-video {
